@@ -1,0 +1,10 @@
+.pad {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.pad:hover {
+    cursor: pointer;
+}

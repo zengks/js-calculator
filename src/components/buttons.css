@@ -1,0 +1,14 @@
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-three-cols {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
