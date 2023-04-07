@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { evaluate } from 'mathjs'
 
 const initialState = {
-    results: '5x(-5)',
+    results: '',
     currentBtn: '0',
     isFinished: false,
 }
