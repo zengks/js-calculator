@@ -1,10 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { evaluate } from 'mathjs'
 
 const initialState = {
-    results: '',
+    results: '5x(-5)',
     currentBtn: '0',
     isFinished: false,
 }
+
+const cal = (equation) => {
+    return evaluate(equation.replace('x','*'))
+}
+
 
 const calculation = (equation) => {
     let arr = equation.split('')
@@ -51,9 +57,9 @@ export const displaySlice = createSlice({
         updateResult: (state, action) => {
             if (action.payload === '=') {
                 if (state.isFinished === false) {
-                    state.results = calculation(state.results)
+                    state.results = cal(state.results)
                     state.isFinished = true
-                }else{
+                } else {
                     state.results = '0'
                 }
             } else {

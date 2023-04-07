@@ -4,7 +4,6 @@ import { currentBtn, updateResult, clear } from '../features/display/displaySlic
 
 function Pad({ padProperties, num, id }) {
     const isFinished = useSelector(state => state.display.isFinished)
-    const currentBtnValue = useSelector(state => state.display.currentBtn)
     const dispatch = useDispatch()
 
     const handleClick = (e) => {
