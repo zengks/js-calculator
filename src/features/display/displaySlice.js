@@ -8,7 +8,7 @@ const initialState = {
 }
 
 const cal = (equation) => {
-    return evaluate(equation.replace('x','*'))
+    return evaluate(equation.replace('x', '*'))
 }
 
 
