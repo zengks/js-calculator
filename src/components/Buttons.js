@@ -12,34 +12,34 @@ function Buttons() {
         <div className="buttons">
             <section className="first-three-cols">
                 <section className="row">
-                    <Pad padProperties={acCss} num='AC' />
-                    <Pad padProperties={symbolCss} num='/' />
+                    <Pad padProperties={acCss} num='AC' id='clear' />
+                    <Pad padProperties={symbolCss} num='/' id='divide' />
                 </section>
                 <section className="row">
-                    <Pad padProperties={regularSizeCss} num='7' />
-                    <Pad padProperties={regularSizeCss} num='8' />
-                    <Pad padProperties={regularSizeCss} num='9' />
+                    <Pad padProperties={regularSizeCss} num='7' id='seven' />
+                    <Pad padProperties={regularSizeCss} num='8' id='eight' />
+                    <Pad padProperties={regularSizeCss} num='9' id='nine' />
                 </section>
                 <section className="row">
-                    <Pad padProperties={regularSizeCss} num='4' />
-                    <Pad padProperties={regularSizeCss} num='5' />
-                    <Pad padProperties={regularSizeCss} num='6' />
+                    <Pad padProperties={regularSizeCss} num='4' id='four' />
+                    <Pad padProperties={regularSizeCss} num='5' id='five' />
+                    <Pad padProperties={regularSizeCss} num='6' id='six' />
                 </section>
                 <section className="row">
-                    <Pad padProperties={regularSizeCss} num='1' />
-                    <Pad padProperties={regularSizeCss} num='2' />
-                    <Pad padProperties={regularSizeCss} num='3' />
+                    <Pad padProperties={regularSizeCss} num='1' id='one' />
+                    <Pad padProperties={regularSizeCss} num='2' id='two' />
+                    <Pad padProperties={regularSizeCss} num='3' id='three' />
                 </section>
                 <section className="row">
-                    <Pad padProperties={zeroCss} num='0' />
-                    <Pad padProperties={regularSizeCss} num='.' />
+                    <Pad padProperties={zeroCss} num='0' id='zero' />
+                    <Pad padProperties={regularSizeCss} num='.' id='decimal' />
                 </section>
             </section>
             <section className="last-col">
-                <Pad padProperties={symbolCss} num='x' />
-                <Pad padProperties={symbolCss} num='-' />
-                <Pad padProperties={symbolCss} num='+' />
-                <Pad padProperties={equalCss} num='=' />
+                <Pad padProperties={symbolCss} num='x' id='multiply' />
+                <Pad padProperties={symbolCss} num='-' id='subtract' />
+                <Pad padProperties={symbolCss} num='+' id='add' />
+                <Pad padProperties={equalCss} num='=' id='equals' />
             </section>
         </div>
     )

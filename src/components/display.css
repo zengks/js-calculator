@@ -1,9 +1,20 @@
 .display {
     height: 100px;
+    width: inherit;
     background-color: black;
-    color: white;
     text-align: right;
-    line-height: 8rem;
-    font-size: 70px;
     padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputs {
+    font-size: 30px;
+    color: rgb(240, 208, 64);
+}
+
+.current-input {
+    font-size: 50px;
+    color: white;
 }

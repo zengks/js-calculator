@@ -1,10 +1,40 @@
 import './pad.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { currentBtn, updateResult, clear } from '../features/display/displaySlice'
 
-function Pad({ padProperties, num }) {
+function Pad({ padProperties, num, id }) {
+    const isFinished = useSelector(state => state.display.isFinished)
+    const currentBtnValue = useSelector(state => state.display.currentBtn)
+    const dispatch = useDispatch()
+
+    const handleClick = (e) => {
+        if (e.target.id === 'clear') {
+            dispatch(clear())
+        } else if (isFinished === true) {
+            dispatch(clear())
+            dispatch(currentBtn(e.target.value))
+            dispatch(updateResult(e.target.value))
+        } else {
+            dispatch(currentBtn(e.target.value))
+            dispatch(updateResult(e.target.value))
+        }
+    }
     return (
-        <button className='pad' style={{ width: padProperties.width, height: padProperties.height, lineHeight: padProperties.lineHeight, backgroundColor: padProperties.backgroundColor }}>
+        <button
+            onClick={handleClick}
+            className='pad'
+            id={id}
+            style={{
+                width: padProperties.width,
+                height: padProperties.height,
+                lineHeight: padProperties.lineHeight,
+                backgroundColor: padProperties.backgroundColor
+            }}
+            value={num}
+        >
             {num}
         </button>
     )
 }
+
 export default Pad
